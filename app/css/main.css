@@ -1,0 +1,35 @@
+.photo {
+	border-radius: 50%;
+	width: 60px;
+}
+
+.directive-container {
+	border: solid 1px red;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+button.add {
+	float: right;
+}
+
+.adding-block {
+	padding: 10px;
+}
+
+input {
+	height: 33px;
+}
+
+li {
+	padding: 10px;
+}
+
+button.del {
+	float: right;
+}
+
+.component-container {
+	border: solid 1px pink;
+	border-radius: 5px;
+}

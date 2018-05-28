@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--<title ng-bind-template="{{ ::$ctrl.myName }}'s TO DO List"></title>-->
+    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/ng-cloak.css" rel="stylesheet">
+
+</head>
+<body ng-controller="TodoController as $ctrl" ng-cloak>
+    <div class="container">
+
+        <p>Hello {{$ctrl.myName | addDear}}</p>
+
+        <div class="directive-container">
+            <vi-task-adding></vi-task-adding>
+            <vi-task-list></vi-task-list>
+        </div>
+
+        <div class="component-container">
+            <component-task-adding myName="$ctrl.myName"></component-task-adding>
+            <component-task-list>
+            </component-task-list>
+        </div>
+
+    </div>
+
+
+    <script src="vendor/angular/angular.min.js"></script>
+    <!-- этот скрипт нужен для демонстрации ng-bind-html -->
+    <script src="vendor/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.run.js"></script>
+
+    <script src="services/todo.service.js"></script>
+    <script src="services/component-todo.service.js"></script>
+
+    <script src="filters/addDear.filter.js"></script>
+    <script src="directives/task-list.directive.js"></script>
+    <script src="directives/task-adding.directive.js"></script>
+    <script src="components/task-adding.component.js"></script>
+    <script src="components/task-list.component.js"></script>
+    <script src="components/child.component.js"></script>
+    <script src="controllers/todo.controller.js"></script>
+
+</body>
+</html>
