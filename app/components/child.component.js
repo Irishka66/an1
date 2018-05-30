@@ -10,7 +10,7 @@
         },
         controller: function () {
             this.$onInit = function () {
-                console.log(this.parentCtrl.message);
+                console.log('this message in child from parent: ' + this.parentCtrl.message);
             };
         },
         templateUrl: "templates/child.html",

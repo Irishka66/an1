@@ -1,6 +1,6 @@
 <div>
     <ul>
-        <li ng-repeat="task in $ctrl.arrTasks">
+        <li ng-repeat="task in $ctrl.arrTasks track by $index">
             <span >here is your task:  {{task}}</span>
             <button class="btn btn-primary del" ng-click = "$ctrl.del($index)"> Delete </button>
         </li>

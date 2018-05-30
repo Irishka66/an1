@@ -5,7 +5,7 @@
         bindings: {
             // myName: '<',
         },
-        controller: function (componentTodoService) {
+        controller: function (componentTodoService, $scope) {
 
             this.arrTasks = componentTodoService.arrTasks;
 
@@ -13,7 +13,6 @@
                 componentTodoService.del(index);
                 componentTodoService.saveLocalReminders();
             };
-
 
         },
         templateUrl: "templates/component-task-list.html",

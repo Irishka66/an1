@@ -7,7 +7,7 @@
     // Should I use the following??? It's working right now!
     // TodoController.$inject = ['todoService'];
 
-    function TodoController(todoService) {
+    function TodoController(todoService, ) {   //$router
 
         let vm = this;
         vm.myName = 'Irina';
@@ -27,6 +27,17 @@
         vm.clearInput = function() {
             vm.addedTask = '';
         }
+
+        // $router.config([
+        //     {
+        //         path: '/',
+        //         component: 'start'
+        //     },
+        //     {
+        //         path: '/finish',
+        //         component: 'finish'
+        //     },
+        // ]);
     }
 
 })();
